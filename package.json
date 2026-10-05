@@ -1,0 +1,17 @@
+{
+  "name": "ai-notes-generator",
+  "version": "1.0.0",
+  "description": "AI-Powered Notes Generator - Turn any lecture into complete study material in seconds",
+  "main": "server/src/index.ts",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7"
+  }
+}
